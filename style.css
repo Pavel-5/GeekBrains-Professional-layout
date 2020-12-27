@@ -61,7 +61,7 @@ body {
     line-height: 19px;
 }
 
-.navbar__overlay{
+.navbar__overlay {
     position: fixed;
     left: 0px;
     top: 75px;
@@ -150,6 +150,44 @@ body {
 
 .section {
     width: 100%;
+}
+
+.section--heading {
+    margin-top: 75px;
+    max-width: 1600px;
+    height: 148px;
+    width: 100%;
+    background: #F8F3F4;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading__title {
+    float: left;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F16D7F;
+}
+
+.heading__links {
+    float: right;
+    color: #636363;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.heading__link {
+    text-decoration: none;
+    color: #636363;
+}
+
+.active-link {
+    color: #F16D7F;
+    font-weight: 700;
 }
 
 .section--intro {
@@ -275,27 +313,105 @@ body {
 
 .section--item {
     margin-top: 97px;
-    text-align: center;
     margin-bottom: 95px;
 }
 
-.section--item h2 {
+.item__filter {
+    position: relative;
+    cursor: pointer;
+    width: 360px;
+    background: #FFFFFF;
+}
+
+.item__filter[open] {
+    box-shadow: 0px 0px 10px 5px #EBEBEB;
+}
+
+.item__filter[open] summary {
+    color: #EF5B70;
+}
+
+.item__filter[open] .item__filter__img1 {
+    opacity: 0;
+}
+
+.item__filter[open] .item__filter__img2 {
+    opacity: 100%;
+}
+
+.item__filter summary {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 13px 16px 16px;
+}
+
+.item__filter summary:focus {
+    outline: none;
+}
+
+.item__filter summary::-webkit-details-marker {
+    display: none;
+}
+
+.item__filter summary img {
+    margin-left: 11px;
+}
+
+.item__filter__img2{
+    opacity: 0;
+    position: absolute;
+    top: 17px;
+    left: 60px;
+}
+
+.filter__list {
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+    background: #ffffff;
+    width: 100%;
+    padding: 0px 17px 17px;
+    box-shadow: 0px 10px 10px 5px #EBEBEB;
+}
+
+.filter__li {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.filter__li summary {
+    padding: 11px;
+    color: #EF5B70;
+    box-shadow: 0px 1px 0px 0px #EBEBEB;
+    border-left: 5px solid #EF5B70;
+}
+
+.filter__sublist {
+    list-style-type: none;
+}
+
+.item__title {
     font-weight: 400;
     font-size: 30px;
     line-height: 36px;
     text-align: center;
     color: #222222;
-    margin: 0;
+    margin: 0 auto;
 }
 
-.section--item h4 {
+.item__subtitle {
     font-weight: 400;
     font-size: 14px;
     line-height: 16.8px;
     text-align: center;
     color: #9F9F9F;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 6px;
+    margin-bottom: 0;
 }
 
 .item__list {
@@ -332,7 +448,7 @@ body {
 
 .item__overlay__button {
     margin-top: 188.5px;
-    margin-left: 111.5px;
+    margin-left: 112px;
     height: 43px;
     width: 138px;
     display: flex;
@@ -348,7 +464,7 @@ body {
     margin-left: 11px;
     font-weight: 400;
     font-size: 14px;
-    line-height: 16.8px;
+    line-height: 17px;
     color: white;
 }
 
@@ -369,19 +485,19 @@ body {
     padding: 25px 28px 20px 18px;
 }
 
-.item__title {
+.item__li__title {
     color: #000000;
     font-weight: 400;
     font-size: 13px;
-    line-height: 15.6px;
+    line-height: 16px;
     margin-bottom: 12px;
 }
 
-.item__subtitle {
+.item__li__subtitle {
     color: #5D5D5D;
     font-weight: 300;
     font-size: 14px;
-    line-height: 16.8px;
+    line-height: 17px;
     margin-bottom: 18px;
 }
 
@@ -389,20 +505,25 @@ body {
     color: #F16D7F;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19.2px;
+    line-height: 19px;
 }
 
 .item__button {
     color: #F26376;
-    text-decoration: none;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19.2px;
+    line-height: 19px;
     padding: 14px 38px;
     border: 1px solid #FF6A6A;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
 }
 
-.item__button:hover{
+.item__button:hover {
     color: white;
     background: #F16D7F;
 }
