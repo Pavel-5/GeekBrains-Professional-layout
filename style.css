@@ -259,7 +259,7 @@ body {
     margin: 0;
 }
 
-.section--offers{
+.section--offers {
     margin-bottom: 46px;
 }
 
@@ -332,16 +332,17 @@ body {
     line-height: 29px;
 }
 
-.section--slider{
+.section--slider {
     width: 100%;
     text-align: center;
     padding-top: 0.7%;
     padding-bottom: 2.6%;
     background: #F7F7F7;
     position: relative;
+    margin-bottom: -5%;
 }
 
-.slider__left{
+.slider__left {
     width: 3%;
     position: absolute;
     left: 0;
@@ -350,11 +351,11 @@ body {
     background: rgba(42, 42, 42, 0.15);
 }
 
-.slider__photo{
+.slider__photo {
     width: 37.3%;
 }
 
-.slider__right{
+.slider__right {
     width: 3%;
     position: absolute;
     right: 0;
@@ -363,8 +364,93 @@ body {
     background: rgba(42, 42, 42, 0.15);
 }
 
-.slider__svg{
+.slider__svg {
     width: 25.5%;
+}
+
+.section--description {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 90px;
+}
+
+.section--description .section__wrapper {
+    border: 1px solid #EAEAEA;
+    padding: 65px 15.6%;
+    background: #fff;
+}
+
+.description__title {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #F16D7F;
+}
+
+.description__title::after {
+    content: "";
+    height: 3px;
+    width: 63px;
+    background: #EF5B70;
+    display: block;
+    margin: 12px auto;
+}
+
+.description__subtitle {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4D4D4D;
+    margin-bottom: 45px;
+}
+
+.description__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5E5E5E;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.description__price {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #EF5B70;
+}
+
+.description__price::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: #EAEAEA;
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
+.section--description .select {
+    padding-top: 0;
+    margin-bottom: 48px;
+}
+
+.description__button__img {
+    margin-right: 23px;
+}
+
+.section--description .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18.5%;
+    min-width: 211px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section--description .button:hover .description__button__img path{
+    fill: #fff;
 }
 
 .section--item {
@@ -469,7 +555,7 @@ details summary::-webkit-details-marker {
     display: block;
 }
 
-.item__select {
+.select {
     padding-top: 12px;
     font-weight: 400;
     font-size: 14px;
@@ -480,25 +566,30 @@ details summary::-webkit-details-marker {
     margin-bottom: 65px;
 }
 
-.item__select--trending {
-    margin-right: 19px;
+.section--description .select {
+    justify-content: center;
 }
 
-.item__select--trending summary {
-    cursor: pointer;
-    padding-left: 9px;
-}
-
-.item__select__photo {
-    margin-left: 10px;
-}
-
-.item__select--size {
+.select--trending {
     margin-right: 19px;
     position: relative;
 }
 
-.item__select--size summary {
+.select--trending summary {
+    cursor: pointer;
+    padding-left: 9px;
+}
+
+.select__photo {
+    margin-left: 9px;
+}
+
+.select--size {
+    margin-right: 19px;
+    position: relative;
+}
+
+.select--size summary {
     cursor: pointer;
     padding-left: 9px;
 }
@@ -578,7 +669,31 @@ details summary::-webkit-details-marker {
     border-color: #80bdff;
 }
 
-.item__select--price summary {
+.select--price {
+    position: relative;
+}
+
+.select--price summary {
+    padding-left: 9px;
+    cursor: pointer;
+}
+
+.select--color {
+    position: relative;
+    margin-right: 19px;
+}
+
+.select--color summary {
+    padding-left: 9px;
+    cursor: pointer;
+}
+
+.select--quantity {
+    position: relative;
+    margin-right: 19px;
+}
+
+.select--quantity summary {
     padding-left: 9px;
     cursor: pointer;
 }
@@ -704,7 +819,7 @@ details summary::-webkit-details-marker {
     line-height: 19px;
 }
 
-.item__button {
+.button {
     text-decoration: none;
     color: #F26376;
     font-weight: 400;
@@ -714,7 +829,7 @@ details summary::-webkit-details-marker {
     border: 1px solid #FF6A6A;
 }
 
-.item__button:hover {
+.button:hover {
     color: white;
     background: #F16D7F;
 }
@@ -744,7 +859,7 @@ details summary::-webkit-details-marker {
     color: #BBBBBB;
 }
 
-.pagination__active{
+.pagination__active {
     color: #EF5B70;
 }
 
