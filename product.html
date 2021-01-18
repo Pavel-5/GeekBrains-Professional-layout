@@ -10,7 +10,9 @@
 ">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
 
 <body>
     <header class="navbar">
@@ -77,6 +79,7 @@
         </div>
     </section>
     <section class="section section--slider">
+        <!--
         <a href="" class="slider__link slider__left">
             <svg class="slider__svg" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.995 2L3.995 7L8.995 12L7.995 14L0.994995 7L7.995 0L8.995 2Z" fill="black" /> </svg>
@@ -85,6 +88,26 @@
             <svg class="slider__svg" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.994995 12L5.995 7L0.994995 2L1.995 0L8.995 7L1.995 14L0.994995 12Z" fill="#F16D7F" /> </svg>
         </a>
+-->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active"> <img src="img/slider__photo.jpg" class="d-block w-100" alt="..."> </div>
+                <div class="carousel-item"> <img src="img/slider__photo.jpg" class="d-block w-100" alt="..."> </div>
+                <div class="carousel-item"> <img src="img/slider__photo.jpg" class="d-block w-100" alt="..."> </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                <div class="slider__link">
+                    <svg class="slider__svg" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.995 2L3.995 7L8.995 12L7.995 14L0.994995 7L7.995 0L8.995 2Z" fill="black" /> </svg>
+                </div>
+                <!--            <span class="carousel-control-prev-icon" aria-hidden="true"></span> --><span class="visually-hidden">Previous</span> </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                <div class="slider__link">
+                    <svg class="slider__svg" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.994995 12L5.995 7L0.994995 2L1.995 0L8.995 7L1.995 14L0.994995 12Z" fill="#F16D7F" /> </svg>
+                </div>
+                <!--            <span class="carousel-control-next-icon" aria-hidden="true"></span> --><span class="visually-hidden">Next</span> </a>
+        </div>
     </section>
     <section class="section section--description">
         <div class="section__wrapper">
