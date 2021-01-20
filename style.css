@@ -21,6 +21,7 @@ a:hover {
 body {
     font-family: 'Lato', sans-serif;
     min-width: 320px;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -51,6 +52,14 @@ body {
 .navbar__icon {
     cursor: pointer;
     position: relative;
+}
+
+.navbar__icon:hover {
+    transform: scale(1.1);
+}
+
+.navbar__icon__main:hover {
+    transform: none;
 }
 
 .navbar__icon--left .navbar__icon {
@@ -126,6 +135,7 @@ body {
 }
 
 .navbar__menu .cross {
+    display: none;
     position: absolute;
     right: 17px;
     top: 16px;
@@ -142,7 +152,8 @@ body {
 }
 
 .navbar__overlay.open .navbar__menu .navbar__menu__title,
-.navbar__overlay.open .navbar__menu .navbar__menu__list {
+.navbar__overlay.open .navbar__menu .navbar__menu__list,
+.navbar__overlay.open .navbar__menu .cross {
     display: block;
 }
 
@@ -154,6 +165,10 @@ body {
 
 .overlay__icon {
     position: relative;
+}
+
+.overlay__icon:hover {
+    transform: scale(1.1);
 }
 
 .navbar__menu__title {
@@ -538,8 +553,7 @@ body {
     width: 50%;
 }
 
-.intro__brand::before {
-    content: '';
+.intro__overlay {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -553,6 +567,8 @@ body {
     margin-left: 64px;
     border-left: solid 12px #F16D7F;
     padding-left: 16px;
+    animation: zoomInRight 7s ease-in-out 2s infinite;
+    /*    animation: lightSpeedIn 1s ease-in-out infinite;*/
 }
 
 .intro__title {
@@ -587,6 +603,10 @@ body {
     width: 31.6%;
     margin-right: 2.6%;
     margin-bottom: 2.6%;
+}
+
+.offers__li:hover {
+    transform: scale(1.05);
 }
 
 .offers__li:nth-child(3) {
@@ -1245,12 +1265,6 @@ details summary::-webkit-details-marker {
     margin-bottom: 104px;
 }
 
-.features__link {
-    text-decoration: none;
-    display: block;
-    width: 100%;
-}
-
 .features__title {
     color: #FBFBFB;
     font-weight: 400;
@@ -1358,10 +1372,13 @@ details summary::-webkit-details-marker {
     width: 100px;
     top: 0;
     right: 0;
+    border: none;
 }
 
 .subscribe__email__link:hover {
-    color: white;
+    color: #F26376;
+    background: white;
+    border: 1px solid #FF6A6A;
 }
 
 .footer {
@@ -1396,7 +1413,11 @@ details summary::-webkit-details-marker {
 }
 
 .footer__li {
-    margin-left: 7.3px;
+    margin-left: 7px;
+}
+
+.footer__li:hover {
+    transform: scale(1.1);
 }
 
 .footer__li:nth-child(2) .footer__link {
@@ -1413,6 +1434,9 @@ details summary::-webkit-details-marker {
 }
 
 @media (max-width: 499.9px) {
+    body {
+        overflow-x: auto;
+    }
     .navbar__wrapper {
         width: 96%;
         margin-left: 2%;
@@ -1517,7 +1541,7 @@ details summary::-webkit-details-marker {
     .intro__brand {
         margin-left: 15%;
     }
-    .intro__brand::before {
+    .intro__overlay {
         display: none;
     }
     .intro__title {
@@ -1856,101 +1880,42 @@ details summary::-webkit-details-marker {
     }
 }
 
+@keyframes zoomInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(1000px, -100px, 0);
+        transform: scale3d(.1, .1, .1) translate3d(1000px, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+    10% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+        transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+}
 
-/*
-@media (min-width: 900px) {
-    .navbar__wrapper {
-        width: 70%;
-        margin-left: 15%;
-        margin-right: 15%;
+@keyframes lightSpeedIn {
+    0% {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+        transform: translate3d(100%, 0, 0) skewX(-30deg);
+        opacity: 0;
     }
-    .section__wrapper {
-        width: 70%;
-        margin-left: 15%;
-        margin-right: 15%;
+    60% {
+        -webkit-transform: skewX(20deg);
+        transform: skewX(20deg);
+        opacity: 1;
     }
-    .intro__title {
-        font-size: 48px;
-        line-height: 58px;
+    80% {
+        -webkit-transform: skewX(-5deg);
+        transform: skewX(-5deg);
+        opacity: 1;
     }
-    .intro__subtitle {
-        font-size: 32px;
-        line-height: 38px;
+    100% {
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
     }
-    .offers__title {
-        font-size: 16px;
-        line-height: 19px;
-    }
-    .offers__subtitle {
-        font-size: 24px;
-        line-height: 29px;
-    }
-    .section--slider {
-        padding-top: 0.7%;
-        padding-bottom: 2.6%;
-        margin-bottom: -5%;
-        height: auto;
-    }
-    .slider__link {
-        width: 3%;
-        padding: 0.8% 0;
-    }
-    .slider__photo {
-        width: 37.3%;
-    }
-    .section--description .section__wrapper {
-        width: 70%;
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-    .section--item {
-        padding-top: 39px;
-    }
-    .item__header {
-        justify-content: flex-start;
-        margin-bottom: 64px;
-    }
-    .item__filter {
-        width: 32%;
-        min-width: 200px;
-    }
-    .item__li {
-        width: 32%;
-        margin-right: 2%;
-    }
-    .item__li:nth-child(2n) {
-        margin-right: 2%;
-    }
-    .item__li:nth-child(3n) {
-        margin-right: 0;
-    }
-    .features__list {
-        padding-top: 0;
-    }
-    .features__li {
-        width: 32%;
-        text-align: center;
-        margin-top: 103px;
-        margin-bottom: 104px;
-    }
-    .section--subscribe {
-        height: 448px;
-        background-size: cover;
-        background-image: url(img/subscribe__photo1.jpg);
-    }
-    .section--subscribe {
-        height: 448px;
-    }
-    .section--subscribe .section__wrapper {
-        padding: 0 15%;
-    }
-    .subscribe__general {
-        flex-direction: row;
-        padding: 0;
-    }
-    .footer__wrapper {
-        width: 70%;
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-}*/
+}
