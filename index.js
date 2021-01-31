@@ -8,11 +8,17 @@ burger.addEventListener("click", () => {
     overlay.classList.toggle("open");
     if (isOpen) {
         document.body.style.overflow = "hidden";
-//        document.querySelector(".navbar__wrapper").style.paddingRight = "1.1%";
+//        document.body.style.height = "100vh";
+        document.querySelector(".navbar").style.paddingRight = "1.3%";
+        document.body.style.paddingRight = "1.3%";
+//        document.body.parentNode.style.overflowY = "scroll"
     }
     if (!isOpen) {
         document.body.style.overflow = "auto";
-//        document.querySelector(".navbar__wrapper").style.paddingRight = "0";
+//        document.body.style.height = null;
+        document.querySelector(".navbar").style.paddingRight = "0";
+        document.body.style.paddingRight = "0";
+//        document.body.parentNode.style.overflowY = null
     }
 });
 closebtn.addEventListener("click", () => {
