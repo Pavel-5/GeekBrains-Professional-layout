@@ -22,11 +22,14 @@ a:hover {
 body {
     font-family: 'Lato', sans-serif;
     min-width: 320px;
+    max-width: 1600px;
+    margin: 0 auto;
     overflow-x: hidden;
 }
 
 .navbar {
     width: 100%;
+    max-width: 1600px;
     height: 75px;
     background: #222;
     padding-top: 15px;
@@ -65,6 +68,7 @@ body {
 .navbar__icon {
     cursor: pointer;
     position: relative;
+    transition: transform 0.1s ease-in-out;
 }
 
 .navbar__icon:hover {
@@ -391,6 +395,11 @@ body {
     -webkit-box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
     box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
     margin: 0 0 40px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cart__product:hover {
+    transform: scale(1.05);
 }
 
 .cart__product:nth-child(2) {
@@ -480,6 +489,7 @@ body {
     color: black;
     text-transform: uppercase;
     text-decoration: none;
+    transition: transform 0.2s ease-in-out;
 }
 
 .cart__products__link:hover {
@@ -569,6 +579,7 @@ body {
     line-height: 13px;
     color: #4A4A4A;
     text-transform: uppercase;
+    transition: transform 0.2s ease-in-out;
 }
 
 .address__quote:hover {
@@ -624,6 +635,7 @@ body {
     font-size: 16px;
     line-height: 19px;
     border: none;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .total__button:hover {
@@ -762,10 +774,15 @@ body {
     font-size: 14px;
     line-height: 17px;
     color: #FFFFFF;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .data__button__arrow {
     margin-left: 20px;
+}
+
+.data__button__arrow path {
+    transition: fill 0.3s ease-in-out;
 }
 
 .data__button:hover {
@@ -917,6 +934,7 @@ body {
     width: 31.6%;
     margin-right: 2.6%;
     margin-bottom: 2.6%;
+    transition: transform 0.2s ease-in-out;
 }
 
 .offers__li:hover {
@@ -1197,6 +1215,10 @@ body {
 
 .description__button__img {
     margin-right: 23px;
+}
+
+.description__button__img path {
+    transition: fill 0.3s ease-in-out;
 }
 
 .section--description .button {
@@ -1508,6 +1530,7 @@ details summary::-webkit-details-marker {
     width: 100%;
     height: 100%;
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .item__overlay__button {
@@ -1528,6 +1551,7 @@ details summary::-webkit-details-marker {
     -ms-flex-pack: center;
     justify-content: center;
     border: 1px solid #FFF;
+    transition: transform 0.2s ease-in-out;
 }
 
 .item__overlay__button:hover {
@@ -1583,6 +1607,7 @@ details summary::-webkit-details-marker {
     line-height: 19px;
     padding: 14px 38px;
     border: 1px solid #FF6A6A;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .button:hover {
@@ -1770,6 +1795,7 @@ details summary::-webkit-details-marker {
     top: 0;
     right: 0;
     border: none;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .subscribe__email__link:hover {
@@ -1823,6 +1849,7 @@ details summary::-webkit-details-marker {
 
 .footer__li {
     margin-left: 7px;
+    transition: transform 0.2s ease-in-out;
 }
 
 .footer__li:hover {
